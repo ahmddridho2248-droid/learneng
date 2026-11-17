@@ -1,0 +1,56 @@
+{
+  "deckId": "business-essentials-01",
+  "title": "Workplace & Professional Idioms",
+  "description": "Ungkapan profesional dan komunikasi kantor yang sering digunakan.",
+  "level": "B1",
+  "questions": [
+    {
+      "id": "be-01-q1",
+      "type": "cloze",
+      "level": "B1",
+      "prompt": "Lengkapi kalimat dengan idiom kerja yang tepat:",
+      "sentence": "Let's touch ___ next Monday to discuss the quarterly report.",
+      "translation": "Mari kita saling berkabar Senin depan untuk membahas laporan kuartalan.",
+      "answer": "base",
+      "options": ["base", "ground", "line", "point"],
+      "explanation": "Idiom 'touch base' berarti menghubungi seseorang sebentar untuk bertukar informasi atau update."
+    },
+    {
+      "id": "be-01-q2",
+      "type": "scramble",
+      "level": "B1",
+      "prompt": "Susun kata-kata berikut menjadi kalimat email bisnis:",
+      "sentence": "Please find attached the revised project proposal.",
+      "translation": "Terlampir proposal proyek yang telah direvisi.",
+      "answer": "Please find attached the revised project proposal.",
+      "tokens": ["proposal.", "Please", "attached", "project", "the", "find", "revised"],
+      "explanation": "'Please find attached...' adalah frasa standar dan sopan dalam korespondensi email formal."
+    },
+    {
+      "id": "be-01-q3",
+      "type": "speaking",
+      "level": "B1",
+      "prompt": "Ucapkan kalimat presentasi berikut dengan intonasi jelas:",
+      "sentence": "We need to align our priorities before launching.",
+      "translation": "Kita perlu menyelaraskan prioritas kita sebelum peluncuran.",
+      "answer": "We need to align our priorities before launching.",
+      "explanation": "'Align our priorities' sering dipakai dalam rapat strategis agar semua tim memiliki tujuan yang sama."
+    },
+    {
+      "id": "be-01-q4",
+      "type": "multiple_choice",
+      "level": "B2",
+      "prompt": "Apa maksud rekan kerja ketika berkata: 'Let's play it by ear'?",
+      "sentence": "Let's play it by ear.",
+      "translation": "Kita lihat nanti saja situasinya.",
+      "answer": "Decide how to deal with a situation as it develops.",
+      "options": [
+        "Decide how to deal with a situation as it develops.",
+        "Listen to background music while working.",
+        "Postpone the meeting indefinitely.",
+        "Follow a strict step-by-step agenda."
+      ],
+      "explanation": "'Play it by ear' artinya bertindak fleksibel menyesuaikan situasi tanpa rencana kaku."
+    }
+  ]
+}

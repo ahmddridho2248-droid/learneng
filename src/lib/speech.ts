@@ -8,7 +8,7 @@
 /*  Feature detection                                                  */
 /* ------------------------------------------------------------------ */
 
-const SpeechRecognitionCtor: typeof SpeechRecognition | undefined =
+const SpeechRecognitionCtor: any =
   typeof window !== 'undefined'
     ? (window as any).SpeechRecognition ??
       (window as any).webkitSpeechRecognition
@@ -94,24 +94,26 @@ export function listen(options?: ListenOptions): Promise<ListenResult> {
     const timeoutId = setTimeout(() => {
       if (!settled) {
         settled = true;
-        recognition.stop();
+        try {
+          recognition.stop();
+        } catch {}
         reject(new Error('Speech recognition timed out'));
       }
     }, options?.timeoutMs ?? 8000);
 
-    recognition.onresult = (event: SpeechRecognitionEvent) => {
+    recognition.onresult = (event: any) => {
       if (settled) return;
       settled = true;
       clearTimeout(timeoutId);
 
-      const result = event.results[0]?.[0];
+      const result = event.results?.[0]?.[0];
       resolve({
         transcript: result?.transcript ?? '',
         confidence: result?.confidence ?? 0,
       });
     };
 
-    recognition.onerror = (event: SpeechRecognitionErrorEvent) => {
+    recognition.onerror = (event: any) => {
       if (settled) return;
       settled = true;
       clearTimeout(timeoutId);

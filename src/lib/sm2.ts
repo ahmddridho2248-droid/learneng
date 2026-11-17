@@ -91,6 +91,12 @@ export function sm2(
 /*  IndexedDB persistence helpers                                      */
 /* ------------------------------------------------------------------ */
 
+/** Check if card is due for review today (or never reviewed). */
+export function isCardDue(card: UserCardProgress | undefined): boolean {
+  if (!card) return true;
+  return new Date(card.nextReview).getTime() <= Date.now();
+}
+
 /** Retrieve a single card's progress (or undefined if unseen). */
 export async function getCardProgress(
   cardId: string,
@@ -103,6 +109,18 @@ export async function saveCardProgress(
   card: UserCardProgress,
 ): Promise<void> {
   await set(CARD_PREFIX + card.cardId, card);
+}
+
+/** Count how many cards in a list of card IDs are due today. */
+export async function getDeckDueCount(cardIds: string[]): Promise<number> {
+  let due = 0;
+  for (const id of cardIds) {
+    const progress = await getCardProgress(id);
+    if (isCardDue(progress)) {
+      due += 1;
+    }
+  }
+  return due;
 }
 
 /**
