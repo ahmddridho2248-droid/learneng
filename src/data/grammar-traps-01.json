@@ -1,0 +1,192 @@
+{
+  "deckId": "grammar-traps-01",
+  "title": "Grammar Traps & Common Mistakes",
+  "description": "Jebakan tenses, preposisi, dan subject-verb agreement yang paling sering bikin salah.",
+  "level": "A2",
+  "questions": [
+    {
+      "id": "gt-01-q1",
+      "type": "multiple_choice",
+      "level": "A2",
+      "prompt": "Pilih kalimat yang gramatikal benar:",
+      "sentence": "She ___ to the gym every morning.",
+      "translation": "Dia pergi ke gym setiap pagi.",
+      "answer": "goes",
+      "options": ["goes", "go", "going", "gone"],
+      "explanation": "Subjek 'she' (orang ketiga tunggal) butuh verb dengan akhiran -s/-es di simple present."
+    },
+    {
+      "id": "gt-01-q2",
+      "type": "cloze",
+      "level": "A2",
+      "prompt": "Lengkapi dengan preposisi yang tepat:",
+      "sentence": "The meeting is ___ Monday ___ 3 PM.",
+      "translation": "Rapatnya hari Senin jam 3 sore.",
+      "answer": "on, at",
+      "options": ["on, at", "in, at", "at, on", "on, in"],
+      "explanation": "Pakai 'on' untuk hari (Monday, Friday), 'at' untuk jam (3 PM, noon). Jangan tertukar dengan 'in' yang untuk bulan/tahun."
+    },
+    {
+      "id": "gt-01-q3",
+      "type": "scramble",
+      "level": "A2",
+      "prompt": "Susun menjadi kalimat present perfect yang benar:",
+      "sentence": "I have never been to Japan before.",
+      "translation": "Aku belum pernah ke Jepang sebelumnya.",
+      "answer": "I have never been to Japan before.",
+      "tokens": ["Japan", "been", "never", "I", "before.", "have", "to"],
+      "explanation": "Urutan present perfect: Subject + have/has + (never) + past participle. 'Been to' artinya pernah mengunjungi."
+    },
+    {
+      "id": "gt-01-q4",
+      "type": "multiple_choice",
+      "level": "B1",
+      "prompt": "Mana yang benar?",
+      "sentence": "Everyone ___ their homework before class.",
+      "translation": "Semua orang mengumpulkan PR sebelum kelas.",
+      "answer": "has submitted",
+      "options": ["has submitted", "have submitted", "are submitted", "is submitted"],
+      "explanation": "'Everyone' adalah singular pronoun, jadi pakai 'has' bukan 'have'. Ini jebakan klasik karena maknanya terasa jamak."
+    },
+    {
+      "id": "gt-01-q5",
+      "type": "cloze",
+      "level": "A2",
+      "prompt": "Pilih preposisi yang tepat:",
+      "sentence": "She arrived ___ the airport ___ time.",
+      "translation": "Dia tiba di bandara tepat waktu.",
+      "answer": "at, on",
+      "options": ["at, on", "in, on", "at, in", "to, on"],
+      "explanation": "'Arrive at' untuk tempat spesifik (bandara, stasiun). 'On time' artinya tepat waktu — jangan pakai 'in time' yang artinya masih sempat."
+    },
+    {
+      "id": "gt-01-q6",
+      "type": "speaking",
+      "level": "A2",
+      "prompt": "Ucapkan kalimat ini dengan percaya diri:",
+      "sentence": "I have been waiting for you since two o'clock.",
+      "translation": "Aku sudah menunggumu sejak jam dua.",
+      "answer": "I have been waiting for you since two o'clock.",
+      "explanation": "Present perfect continuous: 'have been + V-ing'. Pakai 'since' untuk titik waktu spesifik, 'for' untuk durasi."
+    },
+    {
+      "id": "gt-01-q7",
+      "type": "multiple_choice",
+      "level": "B1",
+      "prompt": "Pilih bentuk yang benar:",
+      "sentence": "If I ___ you, I would take the job offer.",
+      "translation": "Kalau aku jadi kamu, aku bakal ambil tawaran kerja itu.",
+      "answer": "were",
+      "options": ["were", "was", "am", "would be"],
+      "explanation": "Dalam second conditional (situasi tidak nyata), pakai 'were' untuk semua subjek — termasuk 'I'. 'If I was' dianggap informal dan kurang tepat secara grammar."
+    },
+    {
+      "id": "gt-01-q8",
+      "type": "cloze",
+      "level": "A2",
+      "prompt": "Lengkapi kalimat dengan kata yang tepat:",
+      "sentence": "There ___ a lot of people at the concert last night.",
+      "translation": "Ada banyak orang di konser semalam.",
+      "answer": "were",
+      "options": ["were", "was", "is", "has"],
+      "explanation": "'A lot of people' adalah jamak, jadi pakai 'were'. Jangan tertipu oleh 'There' di awal — verb-nya mengikuti subjek sebenarnya."
+    },
+    {
+      "id": "gt-01-q9",
+      "type": "scramble",
+      "level": "B1",
+      "prompt": "Susun menjadi kalimat yang benar:",
+      "sentence": "She told me that she had already finished the report.",
+      "translation": "Dia bilang ke aku bahwa dia sudah menyelesaikan laporannya.",
+      "answer": "She told me that she had already finished the report.",
+      "tokens": ["the", "that", "She", "already", "told", "had", "me", "finished", "she", "report."],
+      "explanation": "Reported speech: simple past 'finished' bergeser jadi past perfect 'had finished' ketika main verb-nya 'told' (past tense)."
+    },
+    {
+      "id": "gt-01-q10",
+      "type": "multiple_choice",
+      "level": "A2",
+      "prompt": "Pilih yang benar:",
+      "sentence": "Neither the teacher nor the students ___ ready.",
+      "translation": "Baik guru maupun murid-murid belum siap.",
+      "answer": "were",
+      "options": ["were", "was", "is", "has been"],
+      "explanation": "Dengan 'neither...nor', verb mengikuti subjek yang paling dekat. 'Students' (jamak) paling dekat, jadi pakai 'were'."
+    },
+    {
+      "id": "gt-01-q11",
+      "type": "speaking",
+      "level": "B1",
+      "prompt": "Ucapkan kalimat berikut dengan intonasi natural:",
+      "sentence": "I used to play football, but I don't anymore.",
+      "translation": "Dulu aku main sepak bola, tapi sekarang sudah tidak.",
+      "answer": "I used to play football, but I don't anymore.",
+      "explanation": "'Used to' menunjukkan kebiasaan masa lalu yang sudah berhenti. Jangan bingung dengan 'be used to' (terbiasa dengan) atau 'get used to' (mulai terbiasa)."
+    },
+    {
+      "id": "gt-01-q12",
+      "type": "cloze",
+      "level": "B1",
+      "prompt": "Pilih kata yang tepat:",
+      "sentence": "He insisted ___ paying for dinner.",
+      "translation": "Dia bersikeras membayar makan malam.",
+      "answer": "on",
+      "options": ["on", "in", "to", "for"],
+      "explanation": "'Insist on + V-ing' adalah kombinasi tetap. Ini dependent preposition — harus dihafalkan, bukan ditebak."
+    },
+    {
+      "id": "gt-01-q13",
+      "type": "multiple_choice",
+      "level": "B1",
+      "prompt": "Mana kalimat yang benar?",
+      "sentence": "By the time we arrived, the movie ___.",
+      "translation": "Waktu kita sampai, filmnya sudah mulai.",
+      "answer": "had already started",
+      "options": ["had already started", "has already started", "already started", "was already starting"],
+      "explanation": "Past perfect ('had started') menunjukkan aksi yang terjadi SEBELUM aksi past lainnya ('arrived'). Ini time sequencing."
+    },
+    {
+      "id": "gt-01-q14",
+      "type": "scramble",
+      "level": "A2",
+      "prompt": "Susun menjadi pertanyaan yang benar:",
+      "sentence": "How long have you been living here?",
+      "translation": "Sudah berapa lama kamu tinggal di sini?",
+      "answer": "How long have you been living here?",
+      "tokens": ["have", "been", "How", "here?", "living", "you", "long"],
+      "explanation": "Urutan WH-question dengan present perfect continuous: How long + have + subject + been + V-ing. Tanyakan durasi dengan 'how long'."
+    },
+    {
+      "id": "gt-01-q15",
+      "type": "cloze",
+      "level": "B1",
+      "prompt": "Lengkapi dengan bentuk yang tepat:",
+      "sentence": "I wish I ___ more time to study for the exam.",
+      "translation": "Andai aku punya lebih banyak waktu buat belajar ujian.",
+      "answer": "had",
+      "options": ["had", "have", "would have", "having"],
+      "explanation": "'Wish + past simple' untuk menyatakan penyesalan tentang situasi sekarang. 'I wish I had' = andai aku punya (tapi kenyataannya tidak)."
+    },
+    {
+      "id": "gt-01-q16",
+      "type": "speaking",
+      "level": "A2",
+      "prompt": "Ucapkan kalimat berikut — perhatikan penggunaan 'much' vs 'many':",
+      "sentence": "There isn't much traffic today, so we won't be late.",
+      "translation": "Hari ini jalanannya tidak terlalu macet, jadi kita tidak akan telat.",
+      "answer": "There isn't much traffic today, so we won't be late.",
+      "explanation": "'Much' untuk uncountable nouns (traffic, water, money). 'Many' untuk countable nouns (cars, people, books). 'Traffic' tidak bisa dihitung — jangan pakai 'many traffics'."
+    },
+    {
+      "id": "gt-01-q17",
+      "type": "multiple_choice",
+      "level": "B1",
+      "prompt": "Pilih yang gramatikal benar:",
+      "sentence": "The number of students ___ increased this year.",
+      "translation": "Jumlah siswa meningkat tahun ini.",
+      "answer": "has",
+      "options": ["has", "have", "are", "is"],
+      "explanation": "'The number of' dianggap singular — pakai 'has'. Berbeda dengan 'A number of' yang artinya 'banyak' dan dianggap plural."
+    }
+  ]
+}

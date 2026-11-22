@@ -1,0 +1,180 @@
+{
+  "deckId": "idioms-slang-01",
+  "title": "Everyday Idioms & Casual Slang",
+  "description": "Ungkapan kasual dan idiom yang sering muncul di film, serial, dan obrolan sehari-hari.",
+  "level": "B1",
+  "questions": [
+    {
+      "id": "is-01-q1",
+      "type": "multiple_choice",
+      "level": "B1",
+      "prompt": "Temanmu bilang: 'That exam was a piece of cake!' Apa maksudnya?",
+      "sentence": "That exam was a piece of cake!",
+      "translation": "Ujian itu gampang banget!",
+      "answer": "The exam was very easy.",
+      "options": ["The exam was very easy.", "The exam was about baking.", "The exam made him hungry.", "The exam had a food section."],
+      "explanation": "'A piece of cake' = sesuatu yang sangat gampang. Bukan soal kue beneran."
+    },
+    {
+      "id": "is-01-q2",
+      "type": "cloze",
+      "level": "B1",
+      "prompt": "Lengkapi idiom ini:",
+      "sentence": "I'm going to hit the ___ early tonight — I have a big day tomorrow.",
+      "translation": "Aku mau tidur lebih awal malam ini — besok hari yang berat.",
+      "answer": "sack",
+      "options": ["sack", "bed", "pillow", "road"],
+      "explanation": "'Hit the sack' = pergi tidur. Informal tapi sangat umum. 'Hit the hay' juga sama artinya."
+    },
+    {
+      "id": "is-01-q3",
+      "type": "scramble",
+      "level": "B1",
+      "prompt": "Susun kata-kata ini menjadi kalimat idiomatik:",
+      "sentence": "Let's not beat around the bush.",
+      "translation": "Jangan bertele-tele.",
+      "answer": "Let's not beat around the bush.",
+      "tokens": ["beat", "bush.", "not", "the", "Let's", "around"],
+      "explanation": "'Beat around the bush' = berbicara bertele-tele, menghindari topik utama. 'Let's not beat around the bush' = langsung ke intinya."
+    },
+    {
+      "id": "is-01-q4",
+      "type": "speaking",
+      "level": "B1",
+      "prompt": "Ucapkan kalimat slang ini dengan nada kasual:",
+      "sentence": "I'm totally down for pizza tonight — my treat!",
+      "translation": "Aku mau banget pizza malam ini — aku yang traktir!",
+      "answer": "I'm totally down for pizza tonight — my treat!",
+      "explanation": "'I'm down for...' = aku mau / aku ikut. 'My treat' = aku yang bayar. Dua ekspresi kasual yang sangat sering dipakai."
+    },
+    {
+      "id": "is-01-q5",
+      "type": "multiple_choice",
+      "level": "B1",
+      "prompt": "Apa arti 'spill the tea' dalam slang modern?",
+      "sentence": "Come on, spill the tea! What happened at the party?",
+      "translation": "Ayolah, ceritain dong! Apa yang terjadi di pesta?",
+      "answer": "Share the gossip or juicy details.",
+      "options": ["Share the gossip or juicy details.", "Make a cup of tea.", "Clean up a spilled drink.", "Start an argument."],
+      "explanation": "'Spill the tea' = membagikan gosip atau cerita seru. Dari budaya drag dan sekarang mainstream di medsos."
+    },
+    {
+      "id": "is-01-q6",
+      "type": "cloze",
+      "level": "B1",
+      "prompt": "Lengkapi slang berikut:",
+      "sentence": "That movie was so ___ — I literally couldn't stop laughing.",
+      "translation": "Film itu lucu banget — aku beneran nggak bisa berhenti ketawa.",
+      "answer": "hilarious",
+      "options": ["hilarious", "historical", "hysteric", "harmless"],
+      "explanation": "'Hilarious' = sangat lucu. Jangan tertukar dengan 'historical' (bersejarah) atau 'hysterical' (histeris, tapi juga bisa berarti super lucu secara informal)."
+    },
+    {
+      "id": "is-01-q7",
+      "type": "multiple_choice",
+      "level": "B1",
+      "prompt": "Kolega-mu bilang: 'I'm swamped right now.' Apa artinya?",
+      "sentence": "Sorry, I can't help — I'm swamped right now.",
+      "translation": "Maaf, aku nggak bisa bantu — aku lagi sibuk banget sekarang.",
+      "answer": "Very busy with too much work.",
+      "options": ["Very busy with too much work.", "Stuck in a swamp.", "Feeling sick.", "Waiting for someone."],
+      "explanation": "'Swamped' = kewalahan karena terlalu banyak kerjaan. Dari gambaran tenggelam di rawa — kerjaan menumpuk."
+    },
+    {
+      "id": "is-01-q8",
+      "type": "scramble",
+      "level": "B1",
+      "prompt": "Susun menjadi kalimat idiomatik yang natural:",
+      "sentence": "He always gets cold feet before job interviews.",
+      "translation": "Dia selalu grogi sebelum wawancara kerja.",
+      "answer": "He always gets cold feet before job interviews.",
+      "tokens": ["feet", "interviews.", "always", "He", "job", "cold", "before", "gets"],
+      "explanation": "'Get cold feet' = mendadak takut/grogi sebelum melakukan sesuatu yang penting. Bukan soal kaki kedinginan."
+    },
+    {
+      "id": "is-01-q9",
+      "type": "speaking",
+      "level": "B1",
+      "prompt": "Ucapkan kalimat berikut dengan intonasi antusias:",
+      "sentence": "No way! You nailed it on your first try!",
+      "translation": "Masa sih! Kamu berhasil di percobaan pertama!",
+      "answer": "No way! You nailed it on your first try!",
+      "explanation": "'Nailed it' = berhasil dengan sempurna. 'No way!' = ekspresi kaget (positif atau negatif tergantung konteks). Di sini bernada kagum."
+    },
+    {
+      "id": "is-01-q10",
+      "type": "cloze",
+      "level": "B1",
+      "prompt": "Lengkapi idiom yang tepat:",
+      "sentence": "She was on ___ during her presentation — every slide was perfect.",
+      "translation": "Dia tampil luar biasa saat presentasi — setiap slide sempurna.",
+      "answer": "fire",
+      "options": ["fire", "top", "point", "stage"],
+      "explanation": "'On fire' (slang) = sedang dalam performa terbaik, tampil luar biasa. Bukan kebakaran."
+    },
+    {
+      "id": "is-01-q11",
+      "type": "multiple_choice",
+      "level": "B1",
+      "prompt": "Apa maksud kalimat: 'It cost an arm and a leg'?",
+      "sentence": "The new phone cost an arm and a leg.",
+      "translation": "HP barunya mahal banget.",
+      "answer": "It was extremely expensive.",
+      "options": ["It was extremely expensive.", "It required surgery.", "It was a physical challenge.", "It was free with a catch."],
+      "explanation": "'Cost an arm and a leg' = harganya mahal sekali. Idiom hiperbola — seolah harus bayar pakai anggota tubuh."
+    },
+    {
+      "id": "is-01-q12",
+      "type": "scramble",
+      "level": "B1",
+      "prompt": "Susun menjadi kalimat slang yang natural:",
+      "sentence": "I'm going to crash at my friend's place tonight.",
+      "translation": "Aku bakal menginap di tempat temanku malam ini.",
+      "answer": "I'm going to crash at my friend's place tonight.",
+      "tokens": ["crash", "my", "place", "tonight.", "at", "going", "I'm", "to", "friend's"],
+      "explanation": "'Crash at someone's place' = menginap di tempat seseorang (kasual, biasanya mendadak). Bukan 'crash' yang berarti menabrak."
+    },
+    {
+      "id": "is-01-q13",
+      "type": "speaking",
+      "level": "B1",
+      "prompt": "Ucapkan kalimat berikut dengan nada santai:",
+      "sentence": "Hang in there — things will get better soon.",
+      "translation": "Bertahanlah — semuanya akan membaik.",
+      "answer": "Hang in there — things will get better soon.",
+      "explanation": "'Hang in there' = bertahan, jangan menyerah. Ungkapan penyemangat yang sangat umum dipakai teman dekat."
+    },
+    {
+      "id": "is-01-q14",
+      "type": "cloze",
+      "level": "B1",
+      "prompt": "Lengkapi kalimat slang ini:",
+      "sentence": "Stop being so salty — it's just a ___ .",
+      "translation": "Jangan ngambek — itu cuma permainan.",
+      "answer": "game",
+      "options": ["game", "joke", "movie", "dream"],
+      "explanation": "'Salty' (slang) = kesal, ngambek, atau bitter tentang sesuatu yang sepele. Dari istilah gaming lalu menyebar ke percakapan umum."
+    },
+    {
+      "id": "is-01-q15",
+      "type": "multiple_choice",
+      "level": "B1",
+      "prompt": "Apa arti 'ghosting' dalam konteks sosial?",
+      "sentence": "He totally ghosted me after the second date.",
+      "translation": "Dia benar-benar menghilang setelah kencan kedua.",
+      "answer": "Suddenly stopping all communication without explanation.",
+      "options": ["Suddenly stopping all communication without explanation.", "Pretending to be a ghost for Halloween.", "Sending scary messages.", "Moving to a different city."],
+      "explanation": "'Ghosting' = tiba-tiba memutus kontak tanpa penjelasan. Istilah dari budaya dating apps yang sekarang dipakai luas."
+    },
+    {
+      "id": "is-01-q16",
+      "type": "speaking",
+      "level": "B1",
+      "prompt": "Ucapkan kalimat berikut dengan ekspresi kaget:",
+      "sentence": "Are you serious? That's a total game-changer!",
+      "translation": "Serius? Itu benar-benar mengubah segalanya!",
+      "answer": "Are you serious? That's a total game-changer!",
+      "explanation": "'Game-changer' = sesuatu yang mengubah situasi secara drastis. Awalnya dari olahraga, sekarang dipakai di bisnis dan percakapan umum."
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "deckId": "campus-career-01",
+  "title": "Campus Talk & Career Phrases",
+  "description": "Frasa natural untuk diskusi grup, presentasi kampus, dan wawancara kerja.",
+  "level": "B1",
+  "questions": [
+    {
+      "id": "cc-01-q1",
+      "type": "multiple_choice",
+      "level": "B1",
+      "prompt": "Dalam diskusi grup, kamu ingin menyanggah pendapat teman dengan sopan. Pilih frasa terbaik:",
+      "sentence": "I see your point, but I think we should consider another approach.",
+      "translation": "Aku paham maksudmu, tapi menurutku kita harus pertimbangkan pendekatan lain.",
+      "answer": "I see your point, but I think we should consider another approach.",
+      "options": ["I see your point, but I think we should consider another approach.", "You're wrong about that.", "No, that's not how it works.", "I disagree and here's why you're mistaken."],
+      "explanation": "'I see your point, but...' mengakui pendapat lawan bicara sebelum menyampaikan pandanganmu. Ini teknik hedging yang menunjukkan respect di setting akademis."
+    },
+    {
+      "id": "cc-01-q2",
+      "type": "cloze",
+      "level": "B1",
+      "prompt": "Lengkapi kalimat pembuka presentasi ini:",
+      "sentence": "Good morning, everyone. Today I'd like to ___ on the impact of social media on mental health.",
+      "translation": "Selamat pagi, semuanya. Hari ini saya ingin membahas dampak media sosial terhadap kesehatan mental.",
+      "answer": "focus",
+      "options": ["focus", "look", "speak", "say"],
+      "explanation": "'I'd like to focus on...' adalah cara standar membuka presentasi dan mengarahkan audiens ke topik utama. Lebih kuat dari 'talk about'."
+    },
+    {
+      "id": "cc-01-q3",
+      "type": "scramble",
+      "level": "B1",
+      "prompt": "Susun menjadi kalimat yang cocok saat menyimpulkan presentasi:",
+      "sentence": "To sum up, our research shows a clear link between sleep and productivity.",
+      "translation": "Kesimpulannya, riset kami menunjukkan kaitan jelas antara tidur dan produktivitas.",
+      "answer": "To sum up, our research shows a clear link between sleep and productivity.",
+      "tokens": ["our", "clear", "and", "shows", "To", "research", "between", "link", "a", "sum", "up,", "sleep", "productivity."],
+      "explanation": "'To sum up' atau 'In summary' adalah sinyal penutup presentasi. Audiens langsung tahu kamu menuju kesimpulan."
+    },
+    {
+      "id": "cc-01-q4",
+      "type": "speaking",
+      "level": "B1",
+      "prompt": "Ucapkan kalimat ini seolah kamu sedang perkenalan di wawancara kerja:",
+      "sentence": "Thank you for having me. I'm excited about this opportunity to contribute to your team.",
+      "translation": "Terima kasih sudah mengundang saya. Saya antusias dengan kesempatan untuk berkontribusi di tim Anda.",
+      "answer": "Thank you for having me. I'm excited about this opportunity to contribute to your team.",
+      "explanation": "'Thank you for having me' menunjukkan gratitude. 'Contribute to your team' lebih kuat dari 'work here' karena menunjukkan orientasi kolaborasi."
+    },
+    {
+      "id": "cc-01-q5",
+      "type": "multiple_choice",
+      "level": "B2",
+      "prompt": "Interviewer bertanya: 'What's your greatest weakness?' Respons mana yang paling profesional?",
+      "sentence": "What's your greatest weakness?",
+      "translation": "Apa kelemahan terbesar Anda?",
+      "answer": "I tend to overthink details, so I've started setting deadlines for each task to stay on track.",
+      "options": ["I tend to overthink details, so I've started setting deadlines for each task to stay on track.", "I don't have any weaknesses.", "I'm a perfectionist — I work too hard.", "I'm bad at teamwork sometimes."],
+      "explanation": "Jawaban terbaik menyebut kelemahan nyata PLUS langkah konkret yang sudah diambil untuk memperbaikinya. Jawaban klise seperti 'I'm a perfectionist' dianggap tidak otentik."
+    },
+    {
+      "id": "cc-01-q6",
+      "type": "cloze",
+      "level": "B1",
+      "prompt": "Lengkapi kalimat untuk meminta klarifikasi dalam diskusi:",
+      "sentence": "Sorry, could you ___ on that? I'm not sure I fully understand your point.",
+      "translation": "Maaf, bisa jelaskan lebih lanjut? Saya belum sepenuhnya paham maksud Anda.",
+      "answer": "elaborate",
+      "options": ["elaborate", "explain", "expand", "express"],
+      "explanation": "'Could you elaborate on that?' lebih akademis dan sopan dibanding 'Can you explain?'. Sangat berguna di seminar, kelas, dan meeting."
+    },
+    {
+      "id": "cc-01-q7",
+      "type": "scramble",
+      "level": "B1",
+      "prompt": "Susun menjadi kalimat yang natural saat merespons pertanyaan interview:",
+      "sentence": "In my previous role, I managed a team of five people.",
+      "translation": "Di posisi saya sebelumnya, saya memimpin tim yang terdiri dari lima orang.",
+      "answer": "In my previous role, I managed a team of five people.",
+      "tokens": ["of", "managed", "my", "a", "five", "In", "role,", "people.", "I", "team", "previous"],
+      "explanation": "'In my previous role' adalah pembuka standar saat menceritakan pengalaman kerja. Lebih profesional dari 'At my old job'."
+    },
+    {
+      "id": "cc-01-q8",
+      "type": "speaking",
+      "level": "B1",
+      "prompt": "Ucapkan kalimat ini saat mempresentasikan data:",
+      "sentence": "As you can see from this chart, there has been a steady increase since January.",
+      "translation": "Seperti yang bisa Anda lihat dari grafik ini, ada peningkatan stabil sejak Januari.",
+      "answer": "As you can see from this chart, there has been a steady increase since January.",
+      "explanation": "'As you can see from this chart' mengarahkan perhatian audiens ke visual. 'Steady increase' lebih deskriptif dari 'going up'."
+    },
+    {
+      "id": "cc-01-q9",
+      "type": "multiple_choice",
+      "level": "B2",
+      "prompt": "Kamu ingin menginterupsi diskusi dengan sopan. Frasa mana yang paling tepat?",
+      "sentence": "Interrupting politely in a group discussion.",
+      "translation": "Menginterupsi dengan sopan dalam diskusi kelompok.",
+      "answer": "Sorry to jump in, but I'd like to add something.",
+      "options": ["Sorry to jump in, but I'd like to add something.", "Wait, let me talk now.", "Stop — I have something to say.", "Excuse me, you're wrong about that."],
+      "explanation": "'Sorry to jump in' mengakui bahwa kamu menginterupsi. 'I'd like to add something' menunjukkan niatmu membangun diskusi, bukan menjatuhkan."
+    },
+    {
+      "id": "cc-01-q10",
+      "type": "cloze",
+      "level": "B2",
+      "prompt": "Lengkapi email follow-up setelah wawancara:",
+      "sentence": "I wanted to ___ up and thank you for taking the time to meet with me yesterday.",
+      "translation": "Saya ingin menindaklanjuti dan berterima kasih telah meluangkan waktu untuk bertemu saya kemarin.",
+      "answer": "follow",
+      "options": ["follow", "catch", "keep", "pick"],
+      "explanation": "'Follow up' adalah phrasal verb standar untuk menindaklanjuti setelah meeting atau wawancara. Email follow-up dalam 24 jam menunjukkan profesionalisme."
+    },
+    {
+      "id": "cc-01-q11",
+      "type": "speaking",
+      "level": "B1",
+      "prompt": "Ucapkan kalimat ini saat menyampaikan opini di forum diskusi:",
+      "sentence": "From my perspective, the data suggests that remote work increases overall productivity.",
+      "translation": "Dari sudut pandang saya, datanya menunjukkan bahwa kerja remote meningkatkan produktivitas secara keseluruhan.",
+      "answer": "From my perspective, the data suggests that remote work increases overall productivity.",
+      "explanation": "'From my perspective' lebih kuat dari 'I think' di setting akademis. 'The data suggests' menunjukkan argumenmu berbasis bukti, bukan opini belaka."
+    },
+    {
+      "id": "cc-01-q12",
+      "type": "scramble",
+      "level": "B2",
+      "prompt": "Susun menjadi kalimat yang cocok untuk menutup email profesional:",
+      "sentence": "I look forward to hearing from you at your earliest convenience.",
+      "translation": "Saya menantikan kabar dari Anda di waktu yang paling sesuai.",
+      "answer": "I look forward to hearing from you at your earliest convenience.",
+      "tokens": ["look", "your", "convenience.", "forward", "from", "earliest", "hearing", "you", "I", "to", "at"],
+      "explanation": "'At your earliest convenience' adalah frasa sopan yang memberi ruang — lebih halus dari 'as soon as possible'. Cocok untuk email formal."
+    },
+    {
+      "id": "cc-01-q13",
+      "type": "multiple_choice",
+      "level": "B1",
+      "prompt": "Interviewer bertanya: 'Where do you see yourself in five years?' Jawaban mana yang paling strategis?",
+      "sentence": "Where do you see yourself in five years?",
+      "translation": "Di mana Anda melihat diri Anda dalam lima tahun ke depan?",
+      "answer": "I see myself growing within this company, taking on more leadership responsibilities.",
+      "options": ["I see myself growing within this company, taking on more leadership responsibilities.", "I'll probably have your job by then.", "I haven't really thought about it.", "I want to start my own business."],
+      "explanation": "Jawaban ini menunjukkan ambisi sekaligus komitmen pada perusahaan. 'Taking on more responsibilities' sinyal bahwa kamu ingin berkembang, bukan pindah."
+    },
+    {
+      "id": "cc-01-q14",
+      "type": "cloze",
+      "level": "B1",
+      "prompt": "Lengkapi kalimat transisi dalam presentasi:",
+      "sentence": "Now that we've covered the problem, let's ___ on to possible solutions.",
+      "translation": "Sekarang setelah kita membahas masalahnya, mari kita lanjut ke solusi yang memungkinkan.",
+      "answer": "move",
+      "options": ["move", "go", "carry", "step"],
+      "explanation": "'Move on to' adalah transition phrase standar dalam presentasi. Membantu audiens mengikuti struktur dan tahu kapan topik berganti."
+    },
+    {
+      "id": "cc-01-q15",
+      "type": "speaking",
+      "level": "B2",
+      "prompt": "Ucapkan kalimat penutup presentasi ini dengan nada percaya diri:",
+      "sentence": "Thank you for your attention. I'm happy to take any questions you might have.",
+      "translation": "Terima kasih atas perhatiannya. Saya dengan senang hati menjawab pertanyaan yang mungkin ada.",
+      "answer": "Thank you for your attention. I'm happy to take any questions you might have.",
+      "explanation": "'I'm happy to take any questions' lebih warm dan approachable dari 'Any questions?' yang terlalu singkat. Ini standar emas penutup presentasi."
+    },
+    {
+      "id": "cc-01-q16",
+      "type": "multiple_choice",
+      "level": "B2",
+      "prompt": "Kamu mau mengajukan negosiasi gaji. Frasa mana yang paling profesional?",
+      "sentence": "Negotiating salary in a job offer conversation.",
+      "translation": "Negosiasi gaji dalam percakapan tawaran kerja.",
+      "answer": "Based on my research and experience, I was hoping we could discuss a salary in the range of...",
+      "options": ["Based on my research and experience, I was hoping we could discuss a salary in the range of...", "I want more money than what you offered.", "My friend at another company gets paid more.", "I won't accept anything less than..."],
+      "explanation": "'I was hoping we could discuss' (past continuous) terdengar lebih halus dari 'I want'. 'Based on my research' menunjukkan kamu sudah riset, bukan asal minta."
+    }
+  ]
+}

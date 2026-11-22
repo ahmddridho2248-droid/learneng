@@ -1,0 +1,174 @@
+{
+  "deckId": "pronunciation-drill-01",
+  "title": "Pronunciation Drills & Tricky Sounds",
+  "description": "Latihan speaking intensif: silent letters, minimal pairs, dan tongue twisters ringan.",
+  "level": "A2",
+  "questions": [
+    {
+      "id": "pd-01-q1",
+      "type": "speaking",
+      "level": "A2",
+      "prompt": "Ucapkan kalimat ini — perhatikan silent 'k' di awal kata:",
+      "sentence": "I know the knight knocked on the door with his knuckles.",
+      "translation": "Aku tahu ksatria itu mengetuk pintu dengan buku-buku jarinya.",
+      "answer": "I know the knight knocked on the door with his knuckles.",
+      "explanation": "Huruf 'k' di depan 'n' selalu silent: know (/noʊ/), knight (/naɪt/), knocked (/nɒkt/), knuckles (/ˈnʌkəlz/). Jangan dibunyikan 'kuh-now'."
+    },
+    {
+      "id": "pd-01-q2",
+      "type": "speaking",
+      "level": "A2",
+      "prompt": "Ucapkan kalimat ini — huruf 'b' di akhir 'climb' dan 'comb' tidak dibunyikan:",
+      "sentence": "She used a comb after the long climb up the hill.",
+      "translation": "Dia pakai sisir setelah mendaki bukit yang panjang.",
+      "answer": "She used a comb after the long climb up the hill.",
+      "explanation": "Silent 'b' setelah 'm': comb (/koʊm/), climb (/klaɪm/), lamb (/læm/), thumb (/θʌm/). Huruf 'b' tidak diucapkan."
+    },
+    {
+      "id": "pd-01-q3",
+      "type": "multiple_choice",
+      "level": "A2",
+      "prompt": "Kata mana yang TIDAK mengandung silent letter?",
+      "sentence": "Identify the word without a silent letter.",
+      "translation": "Temukan kata yang tidak ada huruf diamnya.",
+      "answer": "lunch",
+      "options": ["lunch", "Wednesday", "listen", "castle"],
+      "explanation": "'Wednesday' (silent 'd'), 'listen' (silent 't'), 'castle' (silent 't'). 'Lunch' — semua hurufnya dibunyikan."
+    },
+    {
+      "id": "pd-01-q4",
+      "type": "speaking",
+      "level": "A2",
+      "prompt": "Tongue twister ringan — ucapkan perlahan, lalu cepat:",
+      "sentence": "She sells seashells by the seashore.",
+      "translation": "Dia menjual kerang laut di tepi pantai.",
+      "answer": "She sells seashells by the seashore.",
+      "explanation": "Latihan bunyi /ʃ/ (sh) vs /s/. 'She' dan 'seashells' pakai /ʃ/, 'sells' dan 'seashore' campur keduanya. Pelan dulu, lalu tambah kecepatan."
+    },
+    {
+      "id": "pd-01-q5",
+      "type": "cloze",
+      "level": "A2",
+      "prompt": "Pilih kata yang bunyinya sama dengan 'flower':",
+      "sentence": "The baker used ___ to make the bread.",
+      "translation": "Tukang roti pakai tepung untuk membuat roti.",
+      "answer": "flour",
+      "options": ["flour", "floor", "flare", "flair"],
+      "explanation": "'Flour' dan 'flower' adalah homophone — bunyinya sama persis (/flaʊər/) tapi artinya beda. 'Floor' bunyinya /flɔːr/."
+    },
+    {
+      "id": "pd-01-q6",
+      "type": "speaking",
+      "level": "B1",
+      "prompt": "Ucapkan kalimat ini — bedakan 'desert' (gurun) dan 'dessert' (pencuci mulut):",
+      "sentence": "We had dessert after crossing the desert.",
+      "translation": "Kita makan pencuci mulut setelah menyeberangi gurun.",
+      "answer": "We had dessert after crossing the desert.",
+      "explanation": "'Desert' (gurun) = /ˈdezərt/ tekanan di suku pertama. 'Dessert' (makanan penutup) = /dɪˈzɜːrt/ tekanan di suku kedua. Satu huruf 's' bikin beda total."
+    },
+    {
+      "id": "pd-01-q7",
+      "type": "multiple_choice",
+      "level": "B1",
+      "prompt": "Kata-kata mana yang BERIMA (rhyme)?",
+      "sentence": "Which pair of words rhyme with each other?",
+      "translation": "Pasangan kata mana yang berima satu sama lain?",
+      "answer": "through / blue",
+      "options": ["through / blue", "cough / rough", "food / flood", "heard / beard"],
+      "explanation": "'Through' (/θruː/) dan 'blue' (/bluː/) berima. 'Cough' (/kɒf/) dan 'rough' (/rʌf/) tidak. English spelling sangat tidak konsisten."
+    },
+    {
+      "id": "pd-01-q8",
+      "type": "speaking",
+      "level": "A2",
+      "prompt": "Ucapkan kalimat ini — 'w' di awal 'write', 'wrong', 'wrap' itu silent:",
+      "sentence": "I wrote the wrong answer and had to wrap it up quickly.",
+      "translation": "Aku menulis jawaban yang salah dan harus menyelesaikannya dengan cepat.",
+      "answer": "I wrote the wrong answer and had to wrap it up quickly.",
+      "explanation": "Silent 'w' sebelum 'r': write (/raɪt/), wrong (/rɒŋ/), wrap (/ræp/). Jangan bunyikan 'wuh-rite'."
+    },
+    {
+      "id": "pd-01-q9",
+      "type": "speaking",
+      "level": "B1",
+      "prompt": "Tongue twister — bedakan /θ/ (th keras) dan /ð/ (th lembut):",
+      "sentence": "The thirty-three thieves thought that they thrilled the throne.",
+      "translation": "Tiga puluh tiga pencuri mengira mereka menggetarkan singgasana.",
+      "answer": "The thirty-three thieves thought that they thrilled the throne.",
+      "explanation": "/θ/ (voiceless): thirty, thieves, thought, throne. /ð/ (voiced): the, that, they. Lidah di antara gigi — bukan /t/ atau /d/."
+    },
+    {
+      "id": "pd-01-q10",
+      "type": "cloze",
+      "level": "B1",
+      "prompt": "Pilih kata yang bunyinya BERBEDA dari tiga lainnya:",
+      "sentence": "Which word sounds different? bough / cough / rough / tough",
+      "translation": "Kata mana yang bunyinya berbeda?",
+      "answer": "bough",
+      "options": ["bough", "cough", "rough", "tough"],
+      "explanation": "'Bough' = /baʊ/ (rima dengan 'cow'). 'Cough' = /kɒf/, 'rough' = /rʌf/, 'tough' = /tʌf/. Semua berakhiran '-ough' tapi bunyinya beda-beda — ini salah satu bagian tersulit English spelling."
+    },
+    {
+      "id": "pd-01-q11",
+      "type": "speaking",
+      "level": "A2",
+      "prompt": "Ucapkan kalimat ini — perhatikan 'h' yang silent:",
+      "sentence": "It took him an hour to find the honest answer.",
+      "translation": "Butuh satu jam baginya menemukan jawaban yang jujur.",
+      "answer": "It took him an hour to find the honest answer.",
+      "explanation": "Silent 'h': hour (/aʊər/), honest (/ˈɒnɪst/). Makanya pakai 'an hour', bukan 'a hour' — mengikuti bunyi vokal, bukan huruf."
+    },
+    {
+      "id": "pd-01-q12",
+      "type": "multiple_choice",
+      "level": "B1",
+      "prompt": "Bagaimana cara mengucapkan 'colonel' dengan benar?",
+      "sentence": "The colonel led the troops into battle.",
+      "translation": "Sang kolonel memimpin pasukan ke pertempuran.",
+      "answer": "/ˈkɜːrnəl/ — sama bunyinya dengan 'kernel'",
+      "options": ["/ˈkɜːrnəl/ — sama bunyinya dengan 'kernel'", "/koʊˈloʊnəl/ — tiga suku kata", "/ˈkɒlənɛl/ — seperti dibaca apa adanya", "/kəˈlʌnəl/ — tekanan di tengah"],
+      "explanation": "'Colonel' diucapkan persis seperti 'kernel' (/ˈkɜːrnəl/). Spelling-nya dari Itali, tapi pengucapannya dari Prancis. Salah satu kata paling aneh di English."
+    },
+    {
+      "id": "pd-01-q13",
+      "type": "speaking",
+      "level": "B1",
+      "prompt": "Tongue twister — latihan bunyi /r/ dan /l/:",
+      "sentence": "Red lorry, yellow lorry, red lorry, yellow lorry.",
+      "translation": "(Latihan pengucapan — truk merah, truk kuning.)",
+      "answer": "Red lorry, yellow lorry, red lorry, yellow lorry.",
+      "explanation": "Bunyi /r/ (ujung lidah tidak menyentuh langit-langit) dan /l/ (ujung lidah menyentuh). Banyak penutur Asia kesulitan membedakan keduanya."
+    },
+    {
+      "id": "pd-01-q14",
+      "type": "speaking",
+      "level": "B2",
+      "prompt": "Ucapkan kalimat ini — perhatikan tekanan kata (word stress):",
+      "sentence": "I need to record a record of all my records.",
+      "translation": "Aku perlu merekam catatan dari semua rekamanku.",
+      "answer": "I need to record a record of all my records.",
+      "explanation": "'Record' sebagai VERB: tekanan di suku kedua (rɪˈkɔːrd). Sebagai NOUN: tekanan di suku pertama (ˈrekərd). Banyak kata English berubah arti tergantung stress."
+    },
+    {
+      "id": "pd-01-q15",
+      "type": "cloze",
+      "level": "A2",
+      "prompt": "Pilih pasangan yang merupakan homophone (bunyi sama, arti beda):",
+      "sentence": "Which pair sounds exactly the same?",
+      "translation": "Pasangan mana yang bunyinya persis sama?",
+      "answer": "their / there",
+      "options": ["their / there", "bear / beer", "quit / quite", "angel / angle"],
+      "explanation": "'Their' dan 'there' bunyinya sama: /ðɛr/. Juga 'they're'. Tiga kata ini adalah trio homophone paling sering bikin bingung."
+    },
+    {
+      "id": "pd-01-q16",
+      "type": "speaking",
+      "level": "B2",
+      "prompt": "Ucapkan kalimat panjang ini dengan linking sounds yang natural:",
+      "sentence": "Would you mind if I asked you a couple of questions about your experience?",
+      "translation": "Apakah kamu keberatan kalau aku menanyakan beberapa pertanyaan tentang pengalamanmu?",
+      "answer": "Would you mind if I asked you a couple of questions about your experience?",
+      "explanation": "Natural linking: 'Would you' → /wʊdʒuː/, 'couple of' → /ˈkʌpələv/, 'about your' → /əˈbaʊtʃɔːr/. Kata-kata English menyambung satu sama lain saat bicara cepat."
+    }
+  ]
+}
