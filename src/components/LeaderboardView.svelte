@@ -81,7 +81,7 @@
         <span class="font-mono text-[10px] font-bold uppercase tracking-wider text-[#141413]/60">#</span>
         <span class="font-mono text-[10px] font-bold uppercase tracking-wider text-[#141413]/60">Player</span>
         <span class="font-mono text-[10px] font-bold uppercase tracking-wider text-[#141413]/60 text-right">Score</span>
-        <span class="font-mono text-[10px] font-bold uppercase tracking-wider text-[#141413]/60 text-right">Acc</span>
+        <span class="font-mono text-[10px] font-bold uppercase tracking-wider text-[#141413]/60 text-right"></span>
       </div>
 
       <!-- Rows -->
@@ -102,17 +102,17 @@
 
           <!-- Username -->
           <span class="text-sm font-bold tracking-tight text-[#141413] truncate pr-2">
-            {entry.username}
+            {entry.nickname}
           </span>
 
           <!-- Score -->
           <span class="font-mono text-sm font-extrabold tabular-nums text-[#141413] text-right">
-            {entry.score.toLocaleString()}
+            {entry.total_xp.toLocaleString()}
           </span>
 
           <!-- Accuracy -->
           <span class="font-mono text-xs font-bold tabular-nums text-[#141413]/70 text-right">
-            {entry.accuracy}%
+            XP
           </span>
         </div>
       {/each}

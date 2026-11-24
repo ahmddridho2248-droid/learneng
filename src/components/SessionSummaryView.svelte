@@ -1,16 +1,29 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
   import type { SessionResult } from '../types/quiz';
   import { playClick } from '../lib/sound';
+  import { submitScore } from '../lib/supabase';
 
   interface Props {
     result: SessionResult;
     correctMap: boolean[];
+    nickname: string | null;
+    totalXP: number;
     onHome: () => void;
   }
 
-  let { result, correctMap, onHome }: Props = $props();
+  let { result, correctMap, nickname, totalXP, onHome }: Props = $props();
 
   let copied = $state(false);
+
+  // Auto-submit score to leaderboard in background
+  onMount(() => {
+    if (nickname && result.xpEarned > 0) {
+      submitScore(nickname, totalXP).catch(() => {
+        // Silent fail — leaderboard is non-critical
+      });
+    }
+  });
 
   function handleHome() {
     playClick();

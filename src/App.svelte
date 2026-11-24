@@ -4,6 +4,7 @@
   import { getTotalXP, reviewCard, getDeckDueCount } from './lib/sm2';
   import { normalize, similarityScore } from './lib/levenshtein';
   import { playClick, playCorrect, playWrong, resumeAudio } from './lib/sound';
+  import { getNickname, saveNickname } from './lib/nickname';
 
   // Components
   import HomeView from './components/HomeView.svelte';
@@ -36,6 +37,7 @@
   // Persistence & XP
   let totalXP = $state(0);
   let dueCounts = $state<Record<string, number>>({});
+  let nickname = $state<string | null>(null);
 
   // Active Quiz State
   let activeDeck = $state<Deck | null>(null);
@@ -74,6 +76,7 @@
 
   onMount(() => {
     refreshProgress();
+    getNickname().then((n) => (nickname = n));
   });
 
   // Start a Quiz Session
@@ -203,6 +206,10 @@
   function handleCloseLeaderboard() {
     view = 'home';
   }
+
+  async function handleSaveNickname(name: string) {
+    nickname = await saveNickname(name);
+  }
 </script>
 
 <main class="max-w-md mx-auto min-h-screen px-4 py-6 flex flex-col justify-between selection:bg-[#FF5A1F] selection:text-white">
@@ -211,8 +218,10 @@
       {decks}
       {dueCounts}
       {totalXP}
+      {nickname}
       onSelectDeck={handleSelectDeck}
       onOpenLeaderboard={handleOpenLeaderboard}
+      onSaveNickname={handleSaveNickname}
     />
   {:else if view === 'quiz' && currentQuestion && activeDeck}
     <div class="flex flex-col gap-4 w-full">
@@ -286,6 +295,8 @@
     <SessionSummaryView
       result={sessionResult}
       correctMap={sessionCorrectMap}
+      {nickname}
+      {totalXP}
       onHome={handleReturnHome}
     />
   {:else if view === 'leaderboard'}
