@@ -1,0 +1,56 @@
+{
+  "deckId": "squad-vibes-01",
+  "title": "Squad Vibes & Inside Jokes",
+  "description": "Latihan bahasa Inggris pakai situasi absurd dan lokal yang relatable.",
+  "level": "B1",
+  "questions": [
+    {
+      "id": "sv-01-q1",
+      "type": "multiple_choice",
+      "level": "B1",
+      "prompt": "Pilih respon bahasa Inggris paling tepat saat temen lu nawarin ide bisnis absurd pas main Shark Tank:",
+      "sentence": "I want to sell invisible umbrellas.",
+      "translation": "Aku mau jualan payung tak terlihat.",
+      "answer": "That is a ridiculous pitch, but I am in.",
+      "options": [
+        "That is a ridiculous pitch, but I am in.",
+        "Why you sell umbrella?",
+        "I very like your idea.",
+        "No, umbrella is not see."
+      ],
+      "explanation": "Gunakan kata \"ridiculous pitch\" untuk merespon ide nyeleneh dengan natural."
+    },
+    {
+      "id": "sv-01-q2",
+      "type": "scramble",
+      "level": "B1",
+      "prompt": "Susun kalimat ajakan buat makan seblak habis kelas di STT NF:",
+      "sentence": "Let's grab some Seblak Syukur after our class.",
+      "translation": "Yuk makan Seblak Syukur habis kelas.",
+      "answer": "Let's grab some Seblak Syukur after our class.",
+      "tokens": ["Let's", "grab", "some", "Seblak", "Syukur", "after", "our", "class."],
+      "explanation": "Frasa \"grab some [makanan]\" sangat natural untuk ajakan makan kasual."
+    },
+    {
+      "id": "sv-01-q3",
+      "type": "speaking",
+      "level": "B1",
+      "prompt": "Ucapkan alibi lu pas main Werewolf biar nggak di-vote warga:",
+      "sentence": "I swear I am just a regular villager, I was at home all night.",
+      "translation": "Sumpah aku cuma warga biasa, aku di rumah semalaman.",
+      "answer": "I swear I am just a regular villager, I was at home all night.",
+      "explanation": "Gunakan penekanan pada kata \"swear\" dan \"regular\" untuk meyakinkan orang lain."
+    },
+    {
+      "id": "sv-01-q4",
+      "type": "cloze",
+      "level": "B1",
+      "prompt": "Lengkapi kalimat keluhan pas antre makan:",
+      "sentence": "The line for Cilok Kuah Pakde Bewok is always so ___ on weekends.",
+      "translation": "Antrean Cilok Kuah Pakde Bewok selalu panjang banget pas akhir pekan.",
+      "answer": "long",
+      "options": ["long", "tall", "far", "much"],
+      "explanation": "Untuk antrean (line/queue), bahasa Inggris menggunakan kata \"long\" (panjang), bukan kata yang lain."
+    }
+  ]
+}

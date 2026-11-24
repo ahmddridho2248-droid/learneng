@@ -4,14 +4,34 @@
 
   interface Props {
     result: SessionResult;
+    correctMap: boolean[];
     onHome: () => void;
   }
 
-  let { result, onHome }: Props = $props();
+  let { result, correctMap, onHome }: Props = $props();
+
+  let copied = $state(false);
 
   function handleHome() {
     playClick();
     onHome();
+  }
+
+  function buildShareText(): string {
+    const squares = correctMap.map((ok) => (ok ? '\u{1F7E9}' : '\u{1F7E5}')).join('');
+    return `LearnEng \u{1F3AF} ${result.correctAnswers}/${result.totalQuestions} | ${squares}`;
+  }
+
+  async function handleShare() {
+    playClick();
+    const text = buildShareText();
+    try {
+      await navigator.clipboard.writeText(text);
+      copied = true;
+      setTimeout(() => (copied = false), 2000);
+    } catch {
+      // Fallback: ignore silently on browsers that block clipboard
+    }
   }
 </script>
 
@@ -72,15 +92,40 @@
     </div>
   </div>
 
-  <!-- Home Button -->
-  <button
-    type="button"
-    onclick={handleHome}
-    class="w-full min-h-[52px] mt-4 font-extrabold text-base bg-[#FF5A1F] text-white rounded-xl border-2 border-[#141413] shadow-[3px_3px_0px_#141413] hover:bg-[#e04f1a] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all duration-75 flex items-center justify-center gap-2"
-  >
-    <span>Back to Decks</span>
-    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-      <polyline points="9 18 15 12 9 6"></polyline>
-    </svg>
-  </button>
+  <!-- Action Buttons -->
+  <div class="flex flex-col gap-3 mt-4">
+    <!-- Share Score Button -->
+    <button
+      type="button"
+      onclick={handleShare}
+      class="w-full min-h-[50px] font-extrabold text-sm bg-white text-[#141413] rounded-xl border-2 border-[#141413] shadow-[3px_3px_0px_#141413] hover:bg-[#EFECE6] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all duration-75 flex items-center justify-center gap-2 relative"
+    >
+      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="18" cy="5" r="3"></circle>
+        <circle cx="6" cy="12" r="3"></circle>
+        <circle cx="18" cy="19" r="3"></circle>
+        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+      </svg>
+      <span>{copied ? 'Copied!' : 'Share Score'}</span>
+
+      {#if copied}
+        <span class="absolute -top-8 left-1/2 -translate-x-1/2 px-3 py-1 bg-[#141413] text-white text-xs font-mono font-bold rounded-lg shadow-md">
+          Copied!
+        </span>
+      {/if}
+    </button>
+
+    <!-- Home Button -->
+    <button
+      type="button"
+      onclick={handleHome}
+      class="w-full min-h-[52px] font-extrabold text-base bg-[#FF5A1F] text-white rounded-xl border-2 border-[#141413] shadow-[3px_3px_0px_#141413] hover:bg-[#e04f1a] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all duration-75 flex items-center justify-center gap-2"
+    >
+      <span>Back to Decks</span>
+      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+  </div>
 </div>

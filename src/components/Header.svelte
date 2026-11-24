@@ -1,10 +1,17 @@
 <script lang="ts">
+  import { playClick } from '../lib/sound';
+
   interface Props {
     totalXP: number;
-    onResetProgress?: () => void;
+    onOpenLeaderboard?: () => void;
   }
 
-  let { totalXP = 0 }: Props = $props();
+  let { totalXP = 0, onOpenLeaderboard }: Props = $props();
+
+  function handleLeaderboard() {
+    playClick();
+    onOpenLeaderboard?.();
+  }
 </script>
 
 <header class="flex items-center justify-between pb-4 border-b-2 border-[#141413]/10">
@@ -20,10 +27,27 @@
     <span class="text-xl font-extrabold tracking-tight text-[#141413]">LearnENG</span>
   </div>
 
-  <div class="inline-flex items-center gap-1.5 px-3 py-1 bg-white border-2 border-[#141413] rounded-full shadow-[2px_2px_0px_#141413]">
-    <svg class="w-3.5 h-3.5 text-[#FF5A1F]" viewBox="0 0 24 24" fill="currentColor">
-      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-    </svg>
-    <span class="font-mono text-xs font-bold tabular-nums text-[#141413]">{totalXP} XP</span>
+  <div class="flex items-center gap-2">
+    <!-- Leaderboard Button -->
+    <button
+      type="button"
+      onclick={handleLeaderboard}
+      class="w-9 h-9 flex items-center justify-center bg-white border-2 border-[#141413] rounded-lg shadow-[2px_2px_0px_#141413] active:translate-x-[1px] active:translate-y-[1px] active:shadow-none transition-all duration-75"
+      title="Leaderboard"
+    >
+      <svg class="w-4 h-4 text-[#141413]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 20V10"></path>
+        <path d="M12 20V4"></path>
+        <path d="M6 20v-6"></path>
+      </svg>
+    </button>
+
+    <!-- XP Badge -->
+    <div class="inline-flex items-center gap-1.5 px-3 py-1 bg-white border-2 border-[#141413] rounded-full shadow-[2px_2px_0px_#141413]">
+      <svg class="w-3.5 h-3.5 text-[#FF5A1F]" viewBox="0 0 24 24" fill="currentColor">
+        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+      </svg>
+      <span class="font-mono text-xs font-bold tabular-nums text-[#141413]">{totalXP} XP</span>
+    </div>
   </div>
 </header>

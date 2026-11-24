@@ -8,14 +8,15 @@
     dueCounts: Record<string, number>;
     totalXP: number;
     onSelectDeck: (deck: Deck) => void;
+    onOpenLeaderboard?: () => void;
   }
 
-  let { decks, dueCounts, totalXP, onSelectDeck }: Props = $props();
+  let { decks, dueCounts, totalXP, onSelectDeck, onOpenLeaderboard }: Props = $props();
 </script>
 
 <div class="flex flex-col gap-6 w-full">
   <!-- Top Header with Brand & XP -->
-  <Header {totalXP} />
+  <Header {totalXP} {onOpenLeaderboard} />
 
   <!-- Section Title -->
   <div class="flex items-center justify-between">

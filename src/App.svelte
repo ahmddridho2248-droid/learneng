@@ -13,6 +13,7 @@
   import SpeakingView from './components/SpeakingView.svelte';
   import FeedbackDrawer from './components/FeedbackDrawer.svelte';
   import SessionSummaryView from './components/SessionSummaryView.svelte';
+  import LeaderboardView from './components/LeaderboardView.svelte';
 
   // Load all question decks dynamically
   const deckModules = import.meta.glob('./data/*.json', { eager: true }) as Record<string, any>;
@@ -29,7 +30,7 @@
   }
 
   // App Navigation State
-  type ViewMode = 'home' | 'quiz' | 'summary';
+  type ViewMode = 'home' | 'quiz' | 'summary' | 'leaderboard';
   let view = $state<ViewMode>('home');
 
   // Persistence & XP
@@ -58,6 +59,7 @@
   let sessionCorrect = $state(0);
   let sessionXpEarned = $state(0);
   let sessionResult = $state<SessionResult | null>(null);
+  let sessionCorrectMap = $state<boolean[]>([]);
 
   // Refresh XP and due counts from IndexedDB
   async function refreshProgress() {
@@ -82,6 +84,7 @@
     sessionCorrect = 0;
     sessionXpEarned = 0;
     sessionResult = null;
+    sessionCorrectMap = [];
     resetQuestionState();
     view = 'quiz';
   }
@@ -136,6 +139,7 @@
 
     isCurrentCorrect = correct;
     isChecked = true;
+    sessionCorrectMap = [...sessionCorrectMap, correct];
 
     // Play feedback sound
     if (correct) {
@@ -191,6 +195,14 @@
     sessionResult = null;
     refreshProgress();
   }
+
+  function handleOpenLeaderboard() {
+    view = 'leaderboard';
+  }
+
+  function handleCloseLeaderboard() {
+    view = 'home';
+  }
 </script>
 
 <main class="max-w-md mx-auto min-h-screen px-4 py-6 flex flex-col justify-between selection:bg-[#FF5A1F] selection:text-white">
@@ -200,6 +212,7 @@
       {dueCounts}
       {totalXP}
       onSelectDeck={handleSelectDeck}
+      onOpenLeaderboard={handleOpenLeaderboard}
     />
   {:else if view === 'quiz' && currentQuestion && activeDeck}
     <div class="flex flex-col gap-4 w-full">
@@ -272,7 +285,12 @@
   {:else if view === 'summary' && sessionResult}
     <SessionSummaryView
       result={sessionResult}
+      correctMap={sessionCorrectMap}
       onHome={handleReturnHome}
+    />
+  {:else if view === 'leaderboard'}
+    <LeaderboardView
+      onClose={handleCloseLeaderboard}
     />
   {/if}
 </main>
