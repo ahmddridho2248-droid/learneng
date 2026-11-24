@@ -34,22 +34,64 @@ export async function getLeaderboard(limit = 20): Promise<LeaderboardEntry[]> {
 }
 
 export async function submitScore(nickname: string, total_xp: number): Promise<void> {
-  const url = `${cleanUrl}/rest/v1/leaderboard`;
+  try {
+    // 1. Cek apakah user sudah ada di database berdasarkan nickname
+    const checkUrl = `${cleanUrl}/rest/v1/leaderboard?nickname=eq.${encodeURIComponent(nickname)}&select=id`;
+    const checkRes = await fetch(checkUrl, {
+      method: 'GET',
+      headers: {
+        'apikey': SUPABASE_ANON_KEY,
+        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+        'Accept': 'application/json',
+      },
+    });
 
-  const res = await fetch(url, {
-    method: 'POST',
-    headers: {
-      'apikey': SUPABASE_ANON_KEY,
-      'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-      'Content-Type': 'application/json',
-      'Prefer': 'return=minimal'
-    },
-    // Pastikan key-nya sesuai kolom SQL
-    body: JSON.stringify({ nickname, total_xp }) 
-  });
+    if (!checkRes.ok) {
+      const errText = await checkRes.text();
+      console.error('Supabase Check User Error:', errText);
+      return;
+    }
 
-  if (!res.ok) {
-    const errText = await res.text();
-    console.error("Supabase POST Error:", errText);
+    const existing: Array<{ id: string | number }> = await checkRes.json();
+
+    if (existing && existing.length > 0) {
+      // 2. User ditemukan: perbarui (PATCH) nilai total_xp
+      const patchUrl = `${cleanUrl}/rest/v1/leaderboard?id=eq.${existing[0].id}`;
+      const patchRes = await fetch(patchUrl, {
+        method: 'PATCH',
+        headers: {
+          'apikey': SUPABASE_ANON_KEY,
+          'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+          'Content-Type': 'application/json',
+          'Prefer': 'return=minimal',
+        },
+        body: JSON.stringify({ total_xp }),
+      });
+
+      if (!patchRes.ok) {
+        const errText = await patchRes.text();
+        console.error('Supabase PATCH Error:', errText);
+      }
+    } else {
+      // 3. User belum ada: buat (POST) row baru
+      const postUrl = `${cleanUrl}/rest/v1/leaderboard`;
+      const postRes = await fetch(postUrl, {
+        method: 'POST',
+        headers: {
+          'apikey': SUPABASE_ANON_KEY,
+          'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+          'Content-Type': 'application/json',
+          'Prefer': 'return=minimal',
+        },
+        body: JSON.stringify({ nickname, total_xp }),
+      });
+
+      if (!postRes.ok) {
+        const errText = await postRes.text();
+        console.error('Supabase POST Error:', errText);
+      }
+    }
+  } catch (err) {
+    console.error('Supabase submitScore Network Error:', err);
   }
 }

@@ -28,6 +28,10 @@
       after: parts[1] ?? '',
     };
   });
+
+  let showSentence = $derived(
+    question.type === 'cloze' || question.sentence !== question.answer
+  );
 </script>
 
 <div class="flex flex-col gap-5 w-full">
@@ -42,19 +46,21 @@
       </span>
     </div>
 
-    <p class="text-sm font-medium text-[#141413]/80 mb-3">{question.prompt}</p>
+    <p class="text-sm font-medium text-[#141413]/80 {showSentence ? 'mb-3' : ''}">{question.prompt}</p>
 
-    <div class="text-lg font-extrabold tracking-tight text-[#141413] leading-relaxed">
-      {#if clozeParts}
+    {#if clozeParts}
+      <div class="text-lg font-extrabold tracking-tight text-[#141413] leading-relaxed">
         <span>{clozeParts.before}</span>
         <span class="inline-block px-2.5 py-0.5 mx-1 font-mono font-bold border-b-2 border-[#FF5A1F] bg-[#FF5A1F]/15 text-[#FF5A1F] rounded">
           {selectedAnswer || '___'}
         </span>
         <span>{clozeParts.after}</span>
-      {:else}
+      </div>
+    {:else if question.sentence !== question.answer}
+      <div class="text-lg font-extrabold tracking-tight text-[#141413] leading-relaxed">
         <span>{question.sentence}</span>
-      {/if}
-    </div>
+      </div>
+    {/if}
   </div>
 
   <!-- Options List -->

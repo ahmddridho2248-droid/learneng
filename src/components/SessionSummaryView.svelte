@@ -10,9 +10,10 @@
     nickname: string | null;
     totalXP: number;
     onHome: () => void;
+    onKeepPracticing?: () => void;
   }
 
-  let { result, correctMap, nickname, totalXP, onHome }: Props = $props();
+  let { result, correctMap, nickname, totalXP, onHome, onKeepPracticing }: Props = $props();
 
   let copied = $state(false);
 
@@ -28,6 +29,11 @@
   function handleHome() {
     playClick();
     onHome();
+  }
+
+  function handleKeepPracticing() {
+    playClick();
+    onKeepPracticing?.();
   }
 
   function buildShareText(): string {
@@ -127,6 +133,22 @@
           Copied!
         </span>
       {/if}
+    </button>
+
+    <!-- Keep Practicing Button (Contrasting Secondary Accent: Cobalt Ink #1D4ED8) -->
+    <button
+      type="button"
+      onclick={handleKeepPracticing}
+      class="w-full min-h-[52px] font-extrabold text-base bg-[#1D4ED8] text-white rounded-xl border-2 border-[#141413] shadow-[3px_3px_0px_#141413] hover:bg-[#1e40af] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all duration-75 flex items-center justify-center gap-2"
+    >
+      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+      </svg>
+      <span>Keep Practicing</span>
+      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12h14"></path>
+        <path d="m12 5 7 7-7 7"></path>
+      </svg>
     </button>
 
     <!-- Home Button -->

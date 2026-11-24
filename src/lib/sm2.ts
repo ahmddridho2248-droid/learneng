@@ -124,6 +124,36 @@ export async function getDeckDueCount(cardIds: string[]): Promise<number> {
 }
 
 /**
+ * Select up to maxCount questions for a study session, prioritizing:
+ * 1. Due review cards (already studied, nextReview <= now)
+ * 2. New cards (never reviewed before)
+ * 3. Remaining cards if needed to reach maxCount
+ * Capped at maxCount (default 5).
+ */
+export async function getSessionQuestions<T extends { id: string }>(
+  questions: T[],
+  maxCount = 5,
+): Promise<T[]> {
+  const dueReviews: T[] = [];
+  const newCards: T[] = [];
+  const notDue: T[] = [];
+
+  for (const q of questions) {
+    const progress = await getCardProgress(q.id);
+    if (!progress) {
+      newCards.push(q);
+    } else if (isCardDue(progress)) {
+      dueReviews.push(q);
+    } else {
+      notDue.push(q);
+    }
+  }
+
+  const prioritized = [...dueReviews, ...newCards, ...notDue];
+  return prioritized.slice(0, maxCount);
+}
+
+/**
  * Process a review: run SM-2, persist the result, award XP.
  * Returns the updated card progress.
  */

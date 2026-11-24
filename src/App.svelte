@@ -1,7 +1,8 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import type { Deck, Question, SessionResult } from './types/quiz';
-  import { getTotalXP, reviewCard, getDeckDueCount } from './lib/sm2';
+  import { getTotalXP, reviewCard, getDeckDueCount, getSessionQuestions, getCardProgress, isCardDue } from './lib/sm2';
+  import { shuffle } from './lib/shuffle';
   import { normalize, similarityScore } from './lib/levenshtein';
   import { playClick, playCorrect, playWrong, resumeAudio } from './lib/sound';
   import { getNickname, saveNickname } from './lib/nickname';
@@ -80,9 +81,55 @@
   });
 
   // Start a Quiz Session
-  function handleSelectDeck(deck: Deck) {
+  async function handleSelectDeck(deck: Deck) {
     resumeAudio();
-    activeDeck = deck;
+    const sessionQuestions = await getSessionQuestions(deck.questions, 5);
+    activeDeck = {
+      ...deck,
+      questions: sessionQuestions.slice(0, 5),
+    };
+    currentIndex = 0;
+    sessionCorrect = 0;
+    sessionXpEarned = 0;
+    sessionResult = null;
+    sessionCorrectMap = [];
+    resetQuestionState();
+    view = 'quiz';
+  }
+
+  // Start an Endless Mixed Session across all available decks
+  async function startMixedSession() {
+    resumeAudio();
+    const allQuestions = decks.flatMap((d) => d.questions);
+
+    // Filter questions: prioritize due today or brand-new
+    const candidateQuestions: Question[] = [];
+    const notDueQuestions: Question[] = [];
+
+    for (const q of allQuestions) {
+      const progress = await getCardProgress(q.id);
+      if (!progress || isCardDue(progress)) {
+        candidateQuestions.push(q);
+      } else {
+        notDueQuestions.push(q);
+      }
+    }
+
+    // Use candidates first, fallback to not-due cards if total pool < 5
+    const pool = candidateQuestions.length >= 5
+      ? candidateQuestions
+      : [...candidateQuestions, ...notDueQuestions];
+
+    // Shuffle and pick exactly 5 questions
+    const selectedQuestions = shuffle(pool).slice(0, 5);
+
+    activeDeck = {
+      deckId: 'mixed-session',
+      title: 'Mixed Endless Practice',
+      description: 'Random questions across all available decks.',
+      level: 'B1',
+      questions: selectedQuestions,
+    };
     currentIndex = 0;
     sessionCorrect = 0;
     sessionXpEarned = 0;
@@ -298,6 +345,7 @@
       {nickname}
       {totalXP}
       onHome={handleReturnHome}
+      onKeepPracticing={startMixedSession}
     />
   {:else if view === 'leaderboard'}
     <LeaderboardView

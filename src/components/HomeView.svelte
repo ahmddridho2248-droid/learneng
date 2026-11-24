@@ -16,6 +16,16 @@
 
   let { decks, dueCounts, totalXP, nickname, onSelectDeck, onOpenLeaderboard, onSaveNickname }: Props = $props();
 
+  const ALLOWED_TITLES = [
+    'Campus Talk & Career Phrases',
+    'Grammar Traps & Common Mistakes',
+    'Squad Vibes & Inside Jokes',
+  ];
+
+  let filteredDecks = $derived(
+    decks.filter((deck) => ALLOWED_TITLES.includes(deck.title))
+  );
+
   let inputValue = $state('');
   let shakeError = $state(false);
 
@@ -105,16 +115,16 @@
         </p>
       </div>
       <span class="font-mono text-xs font-bold text-[#141413]/60 tabular-nums">
-        {decks.length} Decks
+        {filteredDecks.length} Decks
       </span>
     </div>
 
     <!-- Decks List -->
     <div class="flex flex-col gap-4">
-      {#each decks as deck (deck.deckId)}
+      {#each filteredDecks as deck (deck.deckId)}
         <DeckCard
           {deck}
-          dueCount={dueCounts[deck.deckId] ?? 0}
+          dueCount={Math.min(dueCounts[deck.deckId] ?? 0, 5)}
           onSelect={onSelectDeck}
         />
       {/each}
